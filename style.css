@@ -28,17 +28,23 @@ header{
     background-image: url("img/unsplash-1.png");
     height:715px;
 }
-
+h1 {
+    font-size: 36px;
+}
  h2 {
-    font-size: 24px;
+    font-size: 30px;
     text-transform: uppercase;
     font-weight: 500;
     line-height: 50px;
     letter-spacing: 0.1em;
-    text-align:center;
  }
 
  /* header*/
+
+nav {
+    margin: 10px auto;
+}
+
 .header-menu {
     margin: 10px auto;
     padding: 10px 10px; 
@@ -46,13 +52,23 @@ header{
     justify-content: space-around;
     align-items: center;
     width: 90%;
+    font-size: 18px;
 }
 
- a{
+a{
     text-decoration: none;
     color: #533738; 
     font-size: 14px; 
+    padding: 15px;
+    text-decoration: none;
 }
+
+a:hover { 
+    height: 50px;
+    padding: 15px 15px;
+    background:#CC8B86; 
+    color: #fff;
+} 
 
 .logo {
     padding-bottom: 7px; 
@@ -69,17 +85,18 @@ header{
     position: relative;
     top: 90px;
     left:180px;
-    width:330px;
+    width:400px;
 }
 
-.callback {
+.callback-btn {
     width: 250px;
     left: 170px;
     margin-top: 25px;
     background: #CC8B86;
-    padding: 25px 65px;
+    border: none;
+    padding: 25px 55px;
     line-height:25px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* section about */
@@ -91,7 +108,7 @@ header{
 
 .about-head {
     text-align:center;
-    margin:0 10px;
+    margin:20px 10px;
     width: 100%;
 }
 
@@ -102,10 +119,10 @@ header{
 
 .description{
     width: 450px;
-    padding: 5px;
     box-sizing:border-box; 
-    padding:50px 20px;  
-}
+    line-height: 30px;
+    padding: 0 30px;
+}  
 
 .achievements{
     display:flex;
@@ -128,14 +145,15 @@ header{
     height: 35px;
     display: table-cell;
     text-align: center;
+   
 }
 
 /* section works */
 
 .works-head {
-    margin: 0 auto; 
-    width: 100%;
+    margin-left: 100px; 
 }
+
 .works-lists {
     display: flex;
     flex-flow: row wrap;
@@ -151,79 +169,66 @@ header{
     padding: 10px;
     margin: 10px;
 }
-/* hover effect*/
+
+
+/*   hover effect   */
 .work-hover {
     color: #fff;
+    text-align: center;
     opacity:0;
     background-color:#644845 ;
     position: absolute;
-    top: 10px;
+    top: 0;
     bottom: 15px;
-    left: 10px;
+    left: 0;
     right: 0;
-    width: 480px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-  
 }
-.work-hover> h4 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 37px;
-    text-align: center;
-    max-width: 420px;
-  }
+
 .work-hover > p {
- 
     font-size: 18px;
     line-height: 30px;
     max-width: 420px;
-  }
+} 
   
 .work-hover:hover {
     opacity:0.5;
 } 
 
-work__image-hover > h4 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 37px;
-    text-align: center;
-    max-width: 420px;
-  }
 
-.work__image-hover > p {
-    font-size: 18px;
-    line-height: 30px;
-    max-width: 420px;
-}
-/* finish hover*/
+/*  finish hover */
+
+
 .huge {
     width: 680px;
     padding: 10px;
     margin: 10px;
 }
+.more {
+    width: fit-content;
+    margin: 30px auto;
+}
 
 .more a {
-    display:block;
-    font-size: 20px;
+    font-size: 30px;
+    /* font-weight: 500; */
     color: #533738;
-    font-weight: 500;
+    text-decoration: none;
     text-align: center;
     line-height: 50px;
-    margin-bottom: 20px;
 }
 
 .more a::after {
     content: url("img/Arrow3.png");
     margin: 30px 15px;
-    padding-top: 1opx;
+    padding-top: 10px;
 }
-
 
 
 /* section team */
@@ -236,15 +241,16 @@ work__image-hover > h4 {
 }
 .about-head, .team-head, 
 .action-head, .reviews-head{
-    margin: 0 auto; 
     width: 100%;
+    text-align: center;
 }
+
 .team-card {
     width: 300px;
     margin: 10px 10px;
     padding: 5px;
-    box-sizing:border-box; 
-    padding:50px 20px;  
+    box-sizing: border-box; 
+    padding: 50px 20px;  
 }
 
 .team-image img {
@@ -285,9 +291,14 @@ work__image-hover > h4 {
 }
 .review-photo {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 400px;
     margin: 20px;
+}
+
+.review-photo img {
+    margin-bottom: 20px;
 }
 
 /* section actions */
@@ -311,7 +322,7 @@ work__image-hover > h4 {
     margin: 10px 10px;
     padding: 5px;
     box-sizing:border-box;  
-
+    text-align: center;
 }
 
 .action-subhead h2{
@@ -325,58 +336,92 @@ work__image-hover > h4 {
 }
 
 
-/* section application */
-.application  {
+/* section callback */
+.callback  {
+    display: flex;
+    justify-content: space-around;
     background: #8D7370;
     color: #fff;
 }
-
-.application-items {
+.callback-items {
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: flex-start;
+    column-gap: 20px;
+    padding-left: 80px;
 }
 
 .call-form {
-    width: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 50px;
-}
-.call-name, .call-phone {
-    background: none;
-    border: none;
-    border-bottom: 1px solid #ffffff;
-    width: 95%;
+    max-width: 500px;
 }
 
-input {
-    color: white;
+h2.call-head  {
+    display: block;
+}
+
+p.call-text {
     font-size: 16px;
     line-height: 30px;
-    outline: none;
-    border: none;
+    margin-top: 24px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
+.call-text {
+    max-width: 400px;
+    margin-bottom: 30px;
+    opacity: 0.6;
+}
+
+.form {
+    display: grid;
+    row-gap: 15px;
+}
+
+.call-input {
+    padding: 10px 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid #ffffff;
+  }
+
+input:focus {
+    background: #CC8B86;
+    }
+
+.callback-btn:hover {
+    filter: saturate(1.5);
+    transition: filter 0.3s;
+}
+    
 .map {
-    margin-left: 100px;
+    margin-left: auto;
 }  
+
+/*  footer  */
 .footer {
     display:flex;
-    justify-content: space-around;
-    margin:20px auto; 
+    justify-content: flex-start;
+    margin:35px auto; 
+    padding:20px;
+    font-size: 18px;
 }
+
 .footer-phone {
-    width:160px;
-    margin-left: 50px;
+    margin-right: 100px;
 }
 
 .footer-address {
-    width:460px;
-    margin-right: 150px;
+    margin-right: auto;
 }
-.footer-item {
-    width:160px;
-}
-
-/* .nav a:hover { background:#5c8db7; } */
